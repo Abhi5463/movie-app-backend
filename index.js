@@ -6,9 +6,9 @@ const userRoutes = require('./routes/User')
 const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3002;
 console.log(process.env.url);
-mongoose.connect(process.env.URL, {
+mongoose.connect(process.env.url, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => {
