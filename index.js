@@ -6,9 +6,9 @@ const userRoutes = require('./routes/User')
 const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT;
 console.log(process.env.url);
-mongoose.connect("mongodb+srv://abhishekkumar54635460:vmnwZSejLDSLCYIw@cluster0.bteclsh.mongodb.net/?retryWrites=true&w=majority", {
+mongoose.connect(process.env.URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => {
